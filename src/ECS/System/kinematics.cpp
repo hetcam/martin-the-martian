@@ -1,5 +1,5 @@
 #include <ECS/System/kinematics.h>
-#include <glm/detail/func_common.hpp>
+#include <glm/common.hpp>
 
 using namespace ECS;
 
@@ -39,6 +39,7 @@ unsigned int KinematicsSystem::SubscribeEntity(unsigned int entityId){
 
         SDL_assert(pSpeedComponent!= nullptr && pPositionComponent != nullptr && pAccelerationComponent != nullptr);
 
+        //std::cout << "Ingresando tuplas "<<entityId << std::endl;
 
         ids.push_back(entityId);
         accelerations.push_back(&pAccelerationComponent->acceleration);
@@ -91,6 +92,8 @@ void KinematicsSystem::UpdateKinematicsSystem(){
 
         auto speed  = speeds_[index]; if (speed->y == 0.0f && speed->x == 0.0f && speed->z == 0.0f) return;
         
+        //std::cout << "speed " << speed->y << std::endl;
+
         auto accel  = accelerations_[index];
         auto& pos   = *(positions_[index]);
         auto& dirtyFlag = *(positionDirtyFlags_[index]);

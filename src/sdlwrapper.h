@@ -5,7 +5,7 @@
 #include <SDL2/SDL.h>
 #include <utility>
 #include <tuple>
-
+#include <glm/vec3.hpp>
 
 namespace GTech  {
 

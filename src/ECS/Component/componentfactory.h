@@ -2,6 +2,8 @@
 #define __COMPONENTFACTORY_H__
 
 #include "component.h"
+#include <iostream>
+
 namespace ECS {
 
     class ComponentFactory {
@@ -10,6 +12,7 @@ namespace ECS {
         template <typename T>
         static Component CreateComponent(){
             Component pComp = std::make_shared<T>();
+            std::cout<< "ComponentFactory::ComponentFactory "<<pComp << std::endl;
             pComp->m_id = ++m_int;
             return pComp;
         }

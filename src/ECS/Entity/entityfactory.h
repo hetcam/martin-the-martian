@@ -1,7 +1,7 @@
 #ifndef __ENTITYFACTORY_H__
 #define __ENTITYFACTORY_H__
 #include "entity.h"
-
+#include <iostream>
 
 namespace ECS {
     class EntityFactory {
@@ -12,6 +12,7 @@ namespace ECS {
         static Entity CreateEntity(){
 
             Entity pEnt = std::make_shared<Entity_>();
+            std::cout<< "EntityFactory::CreateEntity "<<pEnt << std::endl;
             pEnt->m_id = ++m_int;
             return pEnt;
 

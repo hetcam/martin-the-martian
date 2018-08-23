@@ -5,6 +5,7 @@ using namespace ECS;
 ComponentManager& ComponentManager::GetInstance(){
 
     static ComponentManager cm;
+    //std::cout<< "ComponentManager::GetInstance:  "<<&cm<<std::endl;
     return cm;
 
 }

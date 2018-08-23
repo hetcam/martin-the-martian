@@ -1,5 +1,6 @@
 #include <sdlwrapper.h>
 #include "timer.h"
+#include <glm/vec3.hpp>
 
 using namespace GTech;
 

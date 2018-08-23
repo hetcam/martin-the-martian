@@ -2,7 +2,7 @@
 #include <vector>
 #include <functional>
 
-#include <glm/detail/func_trigonometric.hpp>
+#include <glm/trigonometric.hpp>
 #include <SDL2/SDL.h>
 #include <sdlwrapper.h>
 
